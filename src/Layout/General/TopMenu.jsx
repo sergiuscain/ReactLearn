@@ -3,7 +3,7 @@ import React from "react";
 const TopMenu = () => {
     return(
         <div>
-            <h1>Верхняя менюшка</h1>
+            <h1>Верхнее меню</h1>
         </div>
     )
 }
