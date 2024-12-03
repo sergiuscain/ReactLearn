@@ -1,5 +1,5 @@
 import React from "react";
-import TopMenu from "../General/TopMenu";
+import TopMenu from "../General/NavMenu";
 import Content from "./Content";
 import Footer from "../General/Footer";
 
