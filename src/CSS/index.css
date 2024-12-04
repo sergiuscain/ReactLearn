@@ -7,3 +7,20 @@ body {
   letter-spacing: 2px;
   left: 5%;
 }
+.myCardParam{
+  width: 19vmax;
+  height: 25vmax;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .myCardParam {
+      flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .myCardParam {
+      flex: 1 1 calc(100% - 20px);
+  }
+}
