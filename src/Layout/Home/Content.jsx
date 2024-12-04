@@ -11,7 +11,7 @@ const Content = (props) => {
                 props.setOfLabels.map((item, index) =>
                     <div className="col-3 m-1 card myCardParam">
                             <h5>{item.title}</h5>
-                            <p>{item.text}</p>
+                            <p>{item.body}</p>
                     </div>
             )}
             </div>
