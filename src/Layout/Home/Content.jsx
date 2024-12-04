@@ -10,7 +10,7 @@ const Content = (props) => {
             {
                 props.setOfLabels.map((item, index) =>
                     <div key={item.id} className="col-3 m-1 card myCardParam">
-                            <h5>{item.title.slice(0,30)+"..."}</h5>
+                            <h5>{item.title.length >29 ? item.title.slice(0,26)+"..." : item.title}</h5>
                             <p>{item.body}</p>
                     </div>
             )}
