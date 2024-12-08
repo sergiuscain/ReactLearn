@@ -4,23 +4,62 @@ import TopMenu from "../General/NavMenu";
 import Content from "./Content";
 import Footer from "../General/Footer";
 
-const url = "https://jsonplaceholder.typicode.com/posts";
+const url = "https://localhost:7210/api/Notes/GetById?id=22c98a74-2913-4284-8b9c-b3e528838ba1";
+const notes = [
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+    {
+        "id":1,
+        "title": "Title1",
+        "description": "description1"
+    },
+]
 
 const HomePage = () => {
-    const [labels, setLabels] = useState([]);
-
-    useEffect(() => {
-        axios.get(url)
-        .then(res => {
-            setLabels(res.data.slice(0,50));
-        });
-    });
 
     return(
         <div>
             <TopMenu/>
             <Content 
-                setOfLabels={labels}
+                notes={notes}
             />
             <Footer/>
         </div>

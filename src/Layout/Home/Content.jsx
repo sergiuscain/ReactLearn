@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios'
+import NoteCard from "./Components/NoteCard";
 
 
 const Content = (props) => {
@@ -8,11 +9,8 @@ const Content = (props) => {
         <div>
             <div className="row ps-3">
             {
-                props.setOfLabels.map((item, index) =>
-                    <div key={item.id} className="col-3 m-1 card myCardParam">
-                            <h5>{item.title.length >29 ? item.title.slice(0,26)+"..." : item.title}</h5>
-                            <p>{item.body}</p>
-                    </div>
+                props.notes.map((item, index) =>
+                    <NoteCard data={item}/>
             )}
             </div>
         </div>
