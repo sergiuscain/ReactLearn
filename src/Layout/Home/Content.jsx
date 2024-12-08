@@ -8,7 +8,9 @@ const Content = (props) => {
 
     return(
         <div className="row">
-            <AddNoteBlock/>
+            <AddNoteBlock 
+                AddNote={props.AddNote}
+            />
             <div className="row ps-5">
             {
                 props.notes.map((item, index) =>
