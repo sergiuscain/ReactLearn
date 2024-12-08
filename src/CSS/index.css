@@ -11,6 +11,8 @@ body {
   width: 19vmax;
   height: 25vmax;
   overflow: hidden;
+  background-color: rgb(98, 95, 134);
+  color: rgb(248, 246, 215);
 }
 
 @media (max-width: 768px) {
