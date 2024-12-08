@@ -3,9 +3,11 @@ import React from "react";
 const AddNoteBlock = () =>{
     return(
         <div className="btn">
-            <input value="Заголовок"/><br/>
-            <input value="Описание"/>
-            <button>Создать</button>
+            <p className="purpTextleStyle">Заголовок:</p>
+            <input className="inputBlock"/><br/>
+            <p className="purpTextleStyle">Описание</p>
+            <input className="inputBlock"/><br/>
+            <button className="btn createBtn">Создать</button>
         </div>
     )
 }

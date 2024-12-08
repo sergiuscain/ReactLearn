@@ -26,3 +26,21 @@ body {
       flex: 1 1 calc(100% - 20px);
   }
 }
+
+.createBtn{
+  border-color: blueviolet;
+  color: rgb(162, 162, 250);
+  border-width: 1px;
+  margin: 5px;
+}
+
+.inputBlock{
+  background-color: rgb(140, 152, 221);
+  color: rgb(233, 245, 255);
+  width: 50%;
+  height: 30px;
+  margin: 1px;
+}
+.purpTextleStyle{
+  color: blueviolet;
+}
