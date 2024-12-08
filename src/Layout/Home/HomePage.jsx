@@ -5,13 +5,13 @@ import Content from "./Content";
 import Footer from "../General/Footer";
 
 const url = "https://localhost:7210/api/Notes/GetById?id=22c98a74-2913-4284-8b9c-b3e528838ba1";
-const AddNote = (thisTitle, thisDescription) =>{
+const AddNote = (titleText, descriptionText) =>{
     const note = {
         userId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-        title: {thisTitle},
-        description: {thisDescription}
+        title: {titleText},
+        description: {descriptionText}
     };
-    alert("Click");
+    alert(`title=${titleText} description=${descriptionText}`);
 };
 const notes = [
     {
