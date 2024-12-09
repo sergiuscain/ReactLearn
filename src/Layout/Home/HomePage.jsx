@@ -20,6 +20,11 @@ const HomePage = () => {
         );
           // alert(`попытка создать заметку. Titile: ${titleText}, des: ${descriptionText}`);
     };
+
+    const DeleteNote = (id) =>{
+        // alert(`Попытка удалить карту с  id: ${id}`);
+        axios.delete(`${baseApiUrl}?id=${id}`);
+    };
     
     useEffect(() => {
         axios.get(baseApiUrl).then(
@@ -33,6 +38,7 @@ const HomePage = () => {
             <Content 
                 notes={notes}
                 AddNote={AddNote}
+                DeleteNote={DeleteNote}
             />
             <Footer/>
         </div>

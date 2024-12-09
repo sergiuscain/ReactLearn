@@ -14,7 +14,10 @@ const Content = (props) => {
             <div className="row ps-5">
             {
                 props.notes.map((item, index) =>
-                    <NoteCard data={item}/>
+                    <NoteCard 
+                    data={item}
+                    DeleteNote={props.DeleteNote}
+                    />
             )}
             </div>
         </div>
