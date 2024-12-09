@@ -4,25 +4,26 @@ import TopMenu from "../General/NavMenu";
 import Content from "./Content";
 import Footer from "../General/Footer";
 
-const baseApiUrl = process.env.BASE_API_URL;
-
-const AddNote = (titleText, descriptionText) =>{
-    const note = {
-        userId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-        title: {titleText},
-        description: {descriptionText}
-    };
-    alert(`title=${titleText} description=${descriptionText}`);
-};
 
 
 const HomePage = () => {
-
+    const baseApiUrl = process.env.REACT_APP_API_URL;
     const [notes, setNotes] = useState([])
-    const urlGet = `${baseApiUrl}/getbyid`;
+
+    const AddNote = (titleText, descriptionText) =>{
+          axios.post(baseApiUrl, 
+            {
+                userId: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                title: `${titleText}`,
+                description: `${descriptionText}`,
+              }
+        );
+          // alert(`попытка создать заметку. Titile: ${titleText}, des: ${descriptionText}`);
+    };
+    
     useEffect(() => {
-        axios.get(urlGet).then(
-            res => setNotes.log(res.data)
+        axios.get(baseApiUrl).then(
+            res => setNotes(res.data)
         );
     })
 
