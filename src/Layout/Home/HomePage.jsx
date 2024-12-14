@@ -3,7 +3,8 @@ import axios from 'axios'
 import TopMenu from "../General/NavMenu";
 import Content from "./Content";
 import Footer from "../General/Footer";
-import { Route, Routes } from "react-router-dom";
+import { data, Route, Routes } from "react-router-dom";
+import EditNote from "./Components/EditNote";
 
 
 
@@ -35,24 +36,21 @@ const HomePage = () => {
 
     return(
         <div>
+            <TopMenu/>
             <Routes>
                 <Route path="/" element={
                     <div>
-                        <TopMenu/>
                         <Content 
                             notes={notes}
                             AddNote={AddNote}
                             DeleteNote={DeleteNote}
                             />
-                        <Footer/>
                     </div>
                 }/>
                 <Route path="note/:id" element={
-                    <div>
-                        <h1>Note</h1>
-                    </div>
-                }/>
+                    <EditNote/>}/>
             </Routes>
+            <Footer/>
         </div>
     )
 }
