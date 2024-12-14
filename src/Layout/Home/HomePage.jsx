@@ -3,6 +3,7 @@ import axios from 'axios'
 import TopMenu from "../General/NavMenu";
 import Content from "./Content";
 import Footer from "../General/Footer";
+import { Route, Routes } from "react-router-dom";
 
 
 
@@ -18,7 +19,7 @@ const HomePage = () => {
                 description: `${descriptionText}`,
               }
         );
-          // alert(`попытка создать заметку. Titile: ${titleText}, des: ${descriptionText}`);
+                         alert(`попытка создать заметку. Titile: ${titleText}, des: ${descriptionText}`); //Временная строчка
     };
 
     const DeleteNote = (id) =>{
@@ -34,13 +35,24 @@ const HomePage = () => {
 
     return(
         <div>
-            <TopMenu/>
-            <Content 
-                notes={notes}
-                AddNote={AddNote}
-                DeleteNote={DeleteNote}
-            />
-            <Footer/>
+            <Routes>
+                <Route path="/" element={
+                    <div>
+                        <TopMenu/>
+                        <Content 
+                            notes={notes}
+                            AddNote={AddNote}
+                            DeleteNote={DeleteNote}
+                            />
+                        <Footer/>
+                    </div>
+                }/>
+                <Route path="note/:id" element={
+                    <div>
+                        <h1>Note</h1>
+                    </div>
+                }/>
+            </Routes>
         </div>
     )
 }

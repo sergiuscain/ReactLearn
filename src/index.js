@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
 import './CSS/index.css';
 import HomePage from './Layout/Home/HomePage';
@@ -15,7 +16,7 @@ for(let i = 10; i<100;i++){
   collection.push(i)
 };
 root.render(
-  <div>
+  <BrowserRouter>
     <HomePage/>
-  </div>
+  </BrowserRouter>
 );
